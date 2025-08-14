@@ -25,6 +25,4 @@ export class User {
 
 	@OneToMany(() => UserMovie, um => um.user)
 	userMovies!: UserMovie[]
-
-	
 }
