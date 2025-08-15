@@ -19,7 +19,7 @@ export const env = {
 	AUTH: {
 		JWT_SECRET: requireEnv('JWT_SECRET'),
 		JWT_EXPIRES: process.env.JWT_EXPIRES || '7d',
-		BRCYPT_SALI: Number(process.env.BCRYPT_SALT || 10),
+		BCRYPT_SALT: Number(process.env.BCRYPT_SALT || 10),
 	},
 	KINOPOISK: {
 		BASE_URL:

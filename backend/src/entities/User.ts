@@ -4,6 +4,7 @@ import {
 	Index,
 	OneToMany,
 	PrimaryGeneratedColumn,
+	CreateDateColumn,
 } from 'typeorm'
 import { UserMovie } from './UserMovie'
 
@@ -22,6 +23,9 @@ export class User {
 
 	@Column()
 	passwordHash!: string
+
+	@CreateDateColumn()
+	createdAt!: Date
 
 	@OneToMany(() => UserMovie, um => um.user)
 	userMovies!: UserMovie[]
